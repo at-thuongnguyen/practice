@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts 
+Configuration 1.3//EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="usersForm" type="form.UsersForm" />
+		<form-bean name="footballPitchForm" type="form.FootballPitchForm" />		
+	</form-beans>
+	<action-mappings>
+		<action input="/login.jsp" name="usersForm"
+			path="/login" scope="request" type="action.loginAction">
+			<forward name="thanhCong" path="/index.jsp" redirect="true"/>
+			<forward name="thatBai" path="/login.jsp" />
+		</action>
+		<action input="/register.jsp" name="usersForm"
+			path="/register" scope="request" type="action.RegisterAction">
+			<forward name="addUser" path="/register.jsp" />
+			<forward name="addedUser" path="/login.jsp" redirect="true"/>
+			
+		</action>
+		<action input="/index.jsp" name="footballPitchForm"
+			path="/danh-sach-san" scope="request" type="action.Pitch_List_Action">
+			<forward name="danhsachSan" path="/football_pitch_list_page.jsp" />
+		</action>
+		<action input="/index.jsp" name="usersForm"
+			path="/danh-sach-tai_khoan" scope="request" type="action.Users_List_Action">
+			<forward name="danhsachtaikhoan" path="/users_list_page.jsp" />
+		</action>
+		
+	</action-mappings>
+	<message-resources parameter="action.ApplicationResources" />
+	
+</struts-config>
