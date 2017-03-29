@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import org.apache.struts.action.ActionForm;
 
 import model.bean.FootballPitchBean;
+import model.bean.HourBean;
 
 
 
@@ -16,8 +17,20 @@ public class FootballPitchForm extends ActionForm{
 	private Double price;
 	private String submit;
 	private ArrayList<FootballPitchBean> listSan;
+	private ArrayList<FootballPitchBean> listNamePitch;
+	
 	private FootballPitchBean footballPitchBean;
 	
+	
+	
+	
+	
+	public ArrayList<FootballPitchBean> getListNamePitch() {
+		return listNamePitch;
+	}
+	public void setListNamePitch(ArrayList<FootballPitchBean> listNamePitch) {
+		this.listNamePitch = listNamePitch;
+	}
 	public int getIdPitch() {
 		return idPitch;
 	}

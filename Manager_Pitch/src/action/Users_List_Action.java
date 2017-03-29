@@ -28,7 +28,7 @@ public class Users_List_Action extends Action{
 		
 		ArrayList<userBean> listUsers=usersBO.getListUsers();
 		usersForm.setListUsers(listUsers);	
-		return mapping.findForward("danhsachtaikhoan");
+		return mapping.findForward("danhSachTaiKhoan");
 		
 	}
 }

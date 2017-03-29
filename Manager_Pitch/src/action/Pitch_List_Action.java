@@ -26,7 +26,7 @@ public class Pitch_List_Action extends Action{
 		PitchBO pitchBO = new PitchBO();
 		ArrayList<FootballPitchBean> listSan=pitchBO.getListSan();
 		footballPitchForm.setListSan(listSan);		
-		return mapping.findForward("danhsachSan");
+		return mapping.findForward("danhSachSan");
 		
 	}
 }

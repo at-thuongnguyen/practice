@@ -12,7 +12,7 @@ import model.bean.FootballPitchBean;
 import model.bean.userBean;
 
 public class UsersForm extends ActionForm{
-		private int id;
+		private int idUser;
 		private String first_name;
 		private String last_name;
 		private String birth_date;
@@ -45,11 +45,12 @@ public class UsersForm extends ActionForm{
 		public void setRepassword(String repassword) {
 			this.repassword = repassword;
 		}
-		public int getId() {
-			return id;
+		
+		public int getIdUser() {
+			return idUser;
 		}
-		public void setId(int id) {
-			this.id = id;
+		public void setIdUser(int idUser) {
+			this.idUser = idUser;
 		}
 		public String getFirst_name() {
 			return first_name;

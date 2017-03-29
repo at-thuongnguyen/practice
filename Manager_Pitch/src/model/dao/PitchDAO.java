@@ -41,4 +41,31 @@ ConnectDB db = new ConnectDB();
 		}
 		return list;
 	}
+//Ma san va ten san
+	public ArrayList<FootballPitchBean> getListNamePitch() {
+		
+		db.connect();
+		String sql=	"select ID, pitch_name from footbal_pitchs";
+		ResultSet rs = null;
+		try {
+			Statement stmt = db.getConnection().createStatement();
+			rs = stmt.executeQuery(sql);
+		} catch (SQLException e) { 
+			e.printStackTrace();
+		}
+		
+		ArrayList<FootballPitchBean> list = new ArrayList<FootballPitchBean>();
+		FootballPitchBean footballPitchBean;
+		try {
+			while(rs.next()){
+				footballPitchBean = new FootballPitchBean();
+				footballPitchBean.setIdPitch(rs.getInt("ID"));
+				footballPitchBean.setPitchName(rs.getString("pitch_name"));
+				list.add(footballPitchBean);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return list;
+	}
 }

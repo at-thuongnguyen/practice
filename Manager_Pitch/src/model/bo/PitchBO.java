@@ -8,8 +8,12 @@ import model.dao.PitchDAO;
 
 
 public class PitchBO {
-	PitchDAO pitchDAO = new PitchDAO();
+	static PitchDAO pitchDAO = new PitchDAO();
 	public ArrayList<FootballPitchBean> getListSan(){
 		return pitchDAO.getListSan();
+	}
+	public ArrayList<FootballPitchBean> getListNamePitch() {
+		
+		return pitchDAO.getListNamePitch();
 	}
 }
